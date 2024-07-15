@@ -1,0 +1,672 @@
+/*#include<iostream>
+using namespace std;
+int main(){
+    //Compile time error
+    cout<<"Hello World! "<<var<<endl;
+    //Run time error
+    int value=7/0;
+    cout<<"Value: "<<value<<endl;
+    return 0;
+}
+#include<iostream>
+using namespace std;
+int main(){
+    int a,b;
+    cin>>a>>b;
+    cout<<"sum of number a and b "<<a+b<<endl;
+    return 0;
+}
+#include<iostream>
+using namespace std;
+int main(){
+    int number1 = 15;//Decimal
+    int number2= 017;
+    int number3=0x0F;
+    int number4=0b00001111;
+    cout<<"number 1 : "<<number1<<endl;
+    cout<<"number 2 : "<<number2<<endl;
+    cout<<"number 3 : "<<number3<<endl;
+    cout<<"number 4: "<<number4<<endl;
+    return 0;
+}
+#include<iostream>
+using namespace std;
+int main(){
+    //Braced intializers
+    //Variable may contain random garbage value.Warning
+    int elephant_count;
+    int lion_count{};//Initializes to zero;
+    int dog_count{10};//Initializes to 10;
+    int cat_count{15};//Initializes to 15
+    //can use ecpression as initializer
+    int domesticated_animals {dog_count + cat_count };
+    //int new_number{doesnt_exist};
+    //int narrowing_converion(2.9); //compiler error
+    cout<<"Elephant count : "<<elephant_count<<endl;
+    cout<<"Lion count : "<<lion_count<<endl;
+    cout<<"Dog count : "<<dog_count<<endl;
+    cout<<"Cat count : "<<cat_count<<endl;
+    cout<<"Domesticated animal count: "<<domesticated_animals<<endl;
+    return 0;
+
+}
+#include<iostream>
+using namespace std;
+int main(){
+    //Assignment notation
+    int bike_count=2;
+    int truck_count=7;
+    int vehical_count= bike_count + truck_count;
+    int narrowing_conversion_assignment =2.9;
+    cout<<"Bike count: "<<bike_count<<endl;
+    cout<<"Truck count: "<<truck_count<<endl;
+    cout<<"Vechicle count: "<<vehical_count<<endl;
+    cout<<"Narrowing conversion"<<narrowing_conversion_assignment<<endl;
+    //check the size with sizeof
+    cout<<"sizeof int : "<<sizeof(int)<<endl;
+    cout<<"sizeof truck_count: "<<sizeof(truck_count)<<endl;
+    return 0; 
+}
+
+#include<iostream>
+using namespace std;
+int main(){
+    int apple_count{5};
+    int orange_count{10};
+    int fruit_count (apple_count + orange_count);
+    //int bad_initialization (doesnt_exist3 + doesnot_exist4);
+    //Information lost. less safe than braced intializers
+    int narrowing_conversion_functional (2.9);
+
+    cout<<" Apple count: "<<apple_count<<endl;
+    cout<<"Orange count: "<<orange_count<<endl;
+    cout<<"Fruit count: "<<fruit_count<<endl;
+    cout<<"Narrowing conversion: "<<narrowing_conversion_functional<<endl;//Will loose info
+    return 0; 
+}
+user input- take value from user to enter the Rs and converted into pound vice versa
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+    int amount;
+    cin>>amount;
+    cout<<"Conversion of RS to pound "<<setprecision(3)<<amount/106.90<<endl;
+    int amount2;
+    cin>>amount2;
+    cout<<"Conversion of pound to Rs"<<amount*106.90<<endl;
+    return 0;
+}
+#include<iostream>
+using namespace std;
+int main(){
+    bool red_light{false};
+    bool green_light{true};
+    if(red_light==green_light){
+        cout<<"Stop! "<<endl;
+    }else{
+        cout<<"Go through! "<<endl;
+    }
+    if(green_light){
+        cout<<"Thr light is green! "<<endl;
+    }else{
+        cout<<"The light is not green! "<<endl;
+    }
+    //sizeof()
+    cout<<"sizeof(bool) : "<<sizeof(bool)<<endl;
+    //Printing out a bool
+    //1 -->>true
+    //0 -->>false
+    cout<<endl;
+    cout<<"red light: "<<red_light<<endl;
+    cout<<"green_light: "<<green_light<<endl;
+    cout<< boolalpha;
+    cout<<"red_light : "<<red_light<<endl;
+    cout<<"green_light : "<<green_light<<endl;
+    return 0;
+}*/
+/*#include<iostream>
+using namespace std;
+int main(){
+    int a,b,c;
+    cin>>a>>b>>c;
+    if(a>b && a>c){
+       
+            cout<<"A is maximum";
+        }
+        else if (b>a && b>c){
+            cout<<"B is maximum";
+        }
+        else{
+            cout<<"C is maximum";
+
+        }
+    
+    return 0;
+}
+
+#include <iostream>
+//#include <string>
+using namespace std;
+// Tools
+const int Pen{ 10 };
+const int Marker{ 20 };
+const int Eraser{ 30 };
+const int Rectangle{ 40 };
+const int Circle{ 50 };
+const int Ellipse{ 60 };
+int main(){
+  int tool {Eraser};
+  switch (tool)
+  {
+    case Pen : {
+       cout << "Active tool is Pen" << endl;
+    }
+    break;
+    case Marker : {
+       cout << "Active tool is Marker" << endl;
+    }
+    break;
+  //if (tool==Eraser || tool==Rectangle || tool==Circle) {
+  //cout << "Drawing Shapes" << endl;
+  //}
+    case Eraser :
+    case Rectangle :
+    case Circle : {
+       cout << "Drawing Shapes" << endl;
+    }
+    break;
+    case Ellipse : {
+       cout << "Active tool is Ellipse" << endl;
+    }
+    break;
+    default: {
+      cout << "No match found" << endl;
+    }
+      break;
+  }
+  cout << "Moving on" << endl;
+  /*
+  // Condition can only be integer of enum (We'll learn about enums later in the course)
+  string name {"John"};
+  switch (name) // Compiler error!
+  {
+  }
+  
+   return 0;
+}
+
+#include<iostream>
+using namespace std;
+void sum(int a,int b){
+    cout<<a+b<<endl;
+}
+void sub(int a,int b){
+    cout<<a-b<<endl;
+}
+void mul(int a,int b){
+    cout<<a*b<<endl;
+}
+void division(int a,int b){
+    cout<<a/b<<endl;
+}
+int main()
+{
+    int a,b;
+    cin>>a>>b;
+    sum(a,b);
+    sub(a,b);
+    mul(a,b);
+    div(a,b);
+    return 0;
+}
+
+#include<iostream>
+using namespace std;
+int add(int a,int b,int c){
+    return (a+b+c);
+}
+int add(int a,int b){
+    return (a+b);
+}
+
+int main(){
+    int a,b;
+    cin>>a>>b;
+    cout<<add();
+    return 0;
+}
+function overloading:same function name under same scope
+polymorphism:concept of object oriented programming in which a function takes many forms
+run time polymorphism :This type of polymorphism achieved by function overriding
+compile time polymorphism:This type of polymorphism is achieved by function overloading
+
+for(int i=a; i<=b; i++){
+if(i>=1 && i<=9 ){
+switch(i){
+case 1;
+cout<<"one"<<endl;
+break;
+cout<<"two"<<endl'
+break;
+cout<<"three"<<endl;
+break;
+cout<<"four"<<endl;
+break;
+cout<<"five"<<endl;
+break;
+cout<<"six"<<endl;
+break;
+cout<<"seven"<<endl;
+break;
+cout<<"eight"<<endl;
+break;
+cout<<"nine"<<endl;
+break;
+}}
+else
+{if(i%2==0){
+cout<<"even"<<endl;
+}
+cout<<"odd"<<endl;
+ }}
+return 0;
+}
+#include<iostream>
+using namespace std;
+int main(){
+    int number_of_classes_attended;
+    cin>>number_of_classes_attended;
+    int number_of_classes_held ;
+    cin>>number_of_classes_held;
+    cout<<"Number of classes attended "<<number_of_classes_attended<<endl;
+    cout<<"Number of classes held "<<number_of_classes_held<<endl;
+    int total_percentage=((number_of_classes_attended*100)/number_of_classes_held);
+    cout<<"total percentage of class attendance: "<<total_percentage<<endl;
+    if(total_percentage>75 && total_percentage<=100){
+        cout<<"You are allowed to sit in exam"<<endl;
+    }
+    else if(total_percentage>0 && total_percentage<=75){
+        cout<<"You are not allowed to sit in exam"<<endl;
+    }
+    else{
+        cout<<"Ivalid Input"<<endl;
+    }
+    return 0;
+}
+#include<iostream>
+using namespace std;
+int pound_to_inr(int pound){
+    int pound;
+    cin>>pound;
+    return pound*106;
+}
+float inr_to_pound(int inr){
+    int inr;
+    cin>>inr;
+    return inr/106.0;
+}
+ 
+#include<iostream>
+using namespace std;
+int main(){
+    int a[5]={1,2,3,4,5};
+    cout<<"Completely Initialized Int Array A : "<<endl;
+    for(int x : a)//For each ;ool very easy and important for array data structure
+    //Read as for x in array a
+    //For each loop iterates through elements of the array. Introduced in c++ 11
+    cout<<x<<endl;
+    cout<<endl;
+    int b[6]={1,3,5};//keeping the array incomplete to see what is the outcome result 
+    cout<<"Partial Initialzed Int Array B : "<<endl;
+    for(int y : b) // Shpws that each loop will work work according to size of array and not according 
+    // to the number of elements initialized in the array
+    cout<<y<<endl;
+    cout<<endl;
+
+    float c[6]={1.2,2.4,3.6,48.54,99.48,54.88};
+    cout<<"Completely Intialized Float Array C :";
+    for(float z : c)
+    cout<<z<<endl;
+    
+    float d[6] = {12.6,82.4,43.6,4.54,77.48,84.88};//No need to know the typw of array
+    cout<<"Completely Intialized Float Array D with auto : "<<endl;
+    for(auto z : d)
+     cout<<z<<endl;
+     cout<<endl;
+
+     char e[5]={'A',66,'c',68,'E'};//No need to know the type of array
+     cout<<"Completely Intialized char Array E with auto : "<<endl;
+     for(auto z : e)
+     cout<<z<<endl;
+     cout<<endl;
+     return 0;
+}
+#include<iostream>
+using namespace std;
+int main(){
+    int array[5] = {10,20,30,40,50};
+    // To find sum of elements in an array
+    int sum = 0;
+    for (auto x : array)
+    sum += x;
+    cout<<"sum is "<<sum<<endl;
+    int max = -32678;
+    for (auto temp : array){
+        if (temp > max) // use if (temp < min) then min = temp with min = INT64_MAX initial for minimum
+        {
+            max = temp;
+        }
+    }
+    cout<<"Max element is : "<<max<<endl;
+    int min = 32678;
+    for (auto temp : array){
+        if (temp < min){
+            min = temp;
+        }}
+        cout<<"Min element is : "<<min;
+    
+    return 0;
+}
+#include<iostream>
+using namespace std;
+int main(){
+    int array[5] = {10,20,30,40,50};
+    int user_input;
+    cout<<"enter the number you want to search for in the array : ";
+    cin>>user_input;
+    int counter = 0;
+    for (auto x : array){
+        if (x==user_input)
+        {
+            cout<<"Number "<<user_input<<" is found at location : "<<counter;
+            exit (0);
+        }
+        counter++;
+    }
+    cout<<"Not found!";
+    return 0;
+}
+
+#include<iostream>
+using namespace std;
+int main(){
+    int a[5]={1,4,2,3,8};
+    int value=5;
+    int count=0;
+    //pick the first element of the pairs 
+    for(int i=0;i<5;i++){
+        //pick the second element of the pair along with a[i]
+        
+            if(a[i]+a[j]==value){
+                if(a[i]+a[j]==value){
+                    count=count+1;
+                }
+            }
+        }
+    }
+        cout<<"The count of pairs "<<value<<" is "<<count<<endl;
+    return 0;
+}
+
+#include<iostream>
+using namespace std;
+int main(){
+int a[5]={1,4,2,3,8};
+int value=7;
+int count=0;
+for (int i=0;i<5;i++){
+    for (int j=i+1; j<5; j++){
+        for (int k=i+1; j<5; j++){
+            
+            if(a[i]+a[j]+a[k]==value){
+                if(a[i]+a[j]+a[k]==value){
+                    count=count+1;
+                }
+            }
+    }
+}
+}
+cout<<"The count of pairs "<<value<<" is "<<count<<endl;
+return 0;
+}
+
+#include<iostream>
+using namespace std;
+int main(){
+int a[5];
+cout<<"Enter the array values : "<<endl;
+for(int i=0;i<5;i++){
+    
+    a[5]=i;
+
+    cin>>a[i];
+}
+
+int value;
+cout<<"Enter the array to find the value: "<<endl;
+cin>>value;
+int count=0;
+for (int i=0;i<5;i++){
+    for (int j=i+1; j<5; j++){
+        for (int k=i+1; j<5; j++){
+            
+            if(a[i]+a[j]+a[k]==value){
+                if(a[i]+a[j]+a[k]==value){
+                    count=count+1;
+                }
+            }
+    }
+}
+}
+cout<<"The count of pairs "<<value<<" is "<<count<<endl;
+return 0;
+}
+
+#include<iostream>
+using namespace std;
+int main(){
+    for(int i=0; i<4; i++){
+        for(int i=0; i<5; i++){
+            cout<<"*";
+    }
+    cout<<endl;
+    }
+    return 0;
+}
+#include<iostream>
+using namespace std;
+int main(){
+    for(int i=1;i<=5;i++){
+        for(int j=1;j<=5;j++){
+            if(i+j > 5){
+                cout<<"*";
+            }
+            else{
+                cout<<" ";
+            }
+        }
+        cout<<endl;
+    }
+    return 0;
+}
+
+#include<bits/stdc++.h>
+using namespace std;
+int userArray(int arr[],int n){
+    int temp;
+    for(int i=0;i<n;i++){
+        for(int j=0;j<i-1;j++){
+            if(arr[j]>arr[j+1]){
+                temp=arr[j];
+                arr[j]=arr[j+1];
+                arr[j+1]=temp;
+            }
+            else 
+            continue;
+        }
+    }
+}
+int main(){
+    int arr[5]={5,2,9,6,10};
+    userArray(arr,5);
+    for(int i=0;i<5;i++){
+        cout<<arr[i]<<" ";
+    }
+}
+
+#include<iostream>
+using namespace std;
+void selectSort(int arr[],int n){
+    int min,temp,position;
+    for(int i=0;i<n-1;i++){
+        min = arr[i];
+        position = i;
+        for(int j=i+1;j<n;j++){
+            if(arr[j]<min){
+                min=arr[j];
+                position=j;
+            }
+            else
+            continue;
+        }
+        temp = arr[i];
+        arr[i]=min;
+        arr[position] = temp;
+
+    }
+}
+int main(){
+    int arr[]={8,6,1,3,2};
+    selectSort(arr,5);
+    for(int i=0;i<5;i++){
+        cout<<arr[i]<<" ";
+        
+    }
+    return 0;
+}
+
+#include<iostream>
+#include<string>
+using namespace std;
+int main(){
+    string str1 = "Hello, ";
+    string str2 = "World! ";
+    string result = str1 + str2;
+    cout<<"Concatenated String: "<<result<<endl;
+    return 0;
+}
+
+#include<iostream>
+#include<string>
+using namespace std;
+int main(){
+  string str = "Hello, World!";
+  string substr ="World";
+  size_t found = str.find(substr);
+  if (found != string::npos){
+    cout<<"String found ar index : "<<found<<endl;
+  }
+  else{
+    cout<<"Substring not found : "<<endl;
+  }
+  return 0;
+}
+
+#include<iostream>
+#include<string>
+using namespace std;
+int main(){
+  string str = "Hello, world!";
+    string from = "World! ";
+    string to = "C++";
+    size_t start_pos = str.find(from);
+    if (start_pos != string::npos){
+        str.replace(start_pos, from.length(), to);
+    cout<<"String after replacement: "<<str<<endl;
+    }
+    return 0;
+}
+#include<iostream>
+#include<string>
+using namespace std;
+int main(){
+  
+string str = "Welcome to MIET";
+str.replace(3,4,"abdc");
+cout<<str<<endl;
+return 0;
+}
+
+#include<iostream>
+#include<string>
+using namespace std;
+
+#include<iostream>
+using namespace std;
+int main(){
+    for(int i=0; i<4; i++){
+        for(int i=0; i<5; i++){
+            cout<<"*";
+    }
+    cout<<endl;
+    }
+    return 0;
+}
+
+
+#include<iostream>
+using namespace std;
+int main(){
+    for(int i=1;i<=5;i++){
+        for(int j=1;j<=5;j++){
+            if(i+j > 5){
+                cout<<"*";
+            }
+            else{
+                cout<<" ";
+            }
+        }
+        cout<<endl;
+    }
+    return 0;
+}
+
+
+
+#include<bits/stdc++.h>
+using namespace std;
+int userArray(int arr[],int n){
+    int temp;
+    for(int i=0;i<n;i++){
+        for(int j=0;j<n-i-1;j++){
+            if(arr[j]>arr[j+1]){
+                temp=arr[j];
+                arr[j]=arr[j+1];
+                arr[j+1]=temp;
+            }
+            else 
+            continue;
+        }
+    }
+}
+int searchArray(int arr[],int n,int target){
+    int i=0;
+    for(i=0;i<n;i++){
+        if (arr[i] = target);
+        break;
+    }
+    return i;
+}
+int main(){
+    int arr[6]={44,5,67,12,89,45};
+    userArray(arr,6);
+    int position;
+    position = searchArray(arr,5,67);
+    for(int i=0;i<6;i++){
+        cout<<arr[i]<<" ";
+    }
+    cout<<endl;
+    position = searchArray(arr, 5, 67);
+    cout<<"Number found at "<<position;
+    return 0;
+*/
