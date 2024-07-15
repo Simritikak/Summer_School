@@ -1,0 +1,51 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+
+    char cont;
+    int choice,car = 0, bike =0, rikshaw=0;
+      
+      do{
+        cout<<"Welcome to Car parking\n"<<endl;
+        cout<<"1. Car parking\n"<<endl;
+        cout<<"2. Bike parking\n"<<endl;
+        cout<<"3. Rikshaw parking\n"<<endl;
+        cout<<"4. exit\n"<<endl;
+        cout<<"Enter your choice"<<endl;
+        cin>>choice;
+        switch(choice){
+            case 1:
+            car++;
+            cout<<"Car parked\n";
+            cout<<"Total cars parked\n"<<car;
+            cout<<endl;
+            break;
+             case 2:
+            bike++;
+            cout<<"Bike parked\n";
+            cout<<"Total Bikes parked\n"<<bike;
+            cout<<endl;
+            break;
+             case 3:
+            rikshaw++;
+            cout<<"rikshaw parked\n";
+            cout<<"Total rikshaw parked\n"<<car;
+            cout<<endl;
+            break;
+            case 4:
+            cout<<"Have a Good day!\n\n";
+            exit(0);
+
+            default:
+            cout<<"Invalid Choice!!!";
+
+        }
+
+
+        cout<<"Do you eant to perform again ? (Y/N)";
+        cin>>cont;
+ 
+
+}
+while(cont =='Y' || cont == 'y');
+}
